@@ -12,8 +12,7 @@
             <button class="button button-stable button-block">{{event.name}}</button>
         </super-modal-show>
 
-        <super-modal-show ng-if="event.skipModalTo" location="{{event.skipModalTo}}">
-            <button class="button button-stable button-block">{{event.name}}</button>
-        </super-modal-show>
+        <!-- TODO: can we open this in app (?) -->
+        <button ng-if="event.skipModalTo" class="button button-stable button-block" ng-click="openUrl(event.skipModalTo)">{{event.name}}</button>
     </div>
 </div>

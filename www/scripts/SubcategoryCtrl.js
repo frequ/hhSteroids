@@ -46,5 +46,8 @@ angular.module('SteroidsApplication')
     };
     getSubcategoryContent();
 
+    $scope.openUrl = function(url) {
+        supersonic.app.openURL(url);
+    };
 
 });
