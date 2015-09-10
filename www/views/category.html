@@ -1,0 +1,27 @@
+<super-navbar>
+    <super-navbar-title ng-bind="viewTitle"></super-navbar-title>
+</super-navbar>
+
+<div ng-show="eventsLead" class="card">
+    <div class="item item-text-wrap" ng-bind-html="eventsLead"></div>
+</div>
+
+<div class="row responsive-sm">
+    <h4 ng-show="selectedSubCategory">{{ selectedSubCategory.name }}</h4>
+
+    <div ng-show="hasSubcategories" class="col" ng-repeat="subcategory in subcategories">
+        <super-navigate ng-show="hasSubcategories" location="#/category/{{ categoryId }}/subcategory/{{ subcategory.id }}">
+            <button class="button button-stable button-block">{{ subcategory.name }}</button>
+        </super-navigate>
+    </div>
+
+    <div ng-hide="hasSubcategories" class="col" ng-repeat="event in events">
+        <super-modal-show ng-if="!event.skipModalTo" location="#/category/{{ categoryId }}/{{ event.id }}">
+            <button class="button button-stable button-block">{{event.name}}</button>
+        </super-modal-show>
+
+        <super-modal-show ng-if="event.skipModalTo" location="{{event.skipModalTo}}">
+            <button class="button button-stable button-block">{{event.name}}</button>
+        </super-modal-show>
+    </div>
+</div>

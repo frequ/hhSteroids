@@ -1,0 +1,13 @@
+<super-navbar>
+    <super-navbar-title ng-bind="viewTitle"></super-navbar-title>
+</super-navbar>
+
+<p ng-bind-html="event.content"></p>
+
+<div ng-show="ytUrl" class="video-container">
+    <iframe src="{{ytUrl}}" frameborder="0"></iframe></div>
+</div>
+
+<super-modal-hide>
+    <button class="button button-block button-dark">Sulje</button>
+</super-modal-hide>
