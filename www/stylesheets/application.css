@@ -3,6 +3,7 @@
 }
 .row .col button{
     margin: 0;
+    line-height: 34px;
 }
 
 .row .col .button-stable{

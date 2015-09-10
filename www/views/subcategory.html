@@ -6,12 +6,14 @@
     <div class="item item-text-wrap" ng-bind-html="eventsLead"></div>
 </div>
 
-<div class="col" ng-repeat="event in events">
-    <super-modal-show ng-if="!event.skipModalTo" location="#/category/{{ categoryId }}/{{ event.id }}">
-        <button class="button button-stable button-block">{{event.name}}</button>
-    </super-modal-show>
+<div class="row responsive-sm">
+    <div class="col" ng-repeat="event in events">
+        <super-modal-show ng-if="!event.skipModalTo" location="#/category/{{ categoryId }}/{{ event.id }}">
+            <button class="button button-stable button-block">{{event.name}}</button>
+        </super-modal-show>
 
-    <super-modal-show ng-if="event.skipModalTo" location="{{event.skipModalTo}}">
-        <button class="button button-stable button-block">{{event.name}}</button>
-    </super-modal-show>
+        <super-modal-show ng-if="event.skipModalTo" location="{{event.skipModalTo}}">
+            <button class="button button-stable button-block">{{event.name}}</button>
+        </super-modal-show>
+    </div>
 </div>

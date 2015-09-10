@@ -21,6 +21,7 @@ angular.module('SteroidsApplication')
                         var nameCom = $scope.makeComparable(subcategory.name);
                         if (!$scope.eventsLead && nameCom === $scope.subcategoryId) {
                             $scope.eventsLead = $sce.trustAsHtml(subcategory.lead);
+                            $rootScope.viewTitle = subcategory.name;
                         }
                     });
                 }

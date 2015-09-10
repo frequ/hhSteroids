@@ -5,7 +5,7 @@ angular.module('SteroidsApplication')
         var categoryId = $routeParams.categoryId;
         $scope.event = {};
 
-        $scope.findEvent = function(){
+        var findEvent = function(){
             var promise = $http.get('assets/json/' + categoryId +'.json');
             promise
                 .success(function(data) {
@@ -25,10 +25,7 @@ angular.module('SteroidsApplication')
                 .error(function() {
                     supersonic.logger.warn('Error fetching category data for '+categoryId);
                 });
-
-
-
         };
-        $scope.findEvent();
+        findEvent();
 
     });
