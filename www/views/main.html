@@ -1,18 +1,26 @@
 <super-navbar>
     <super-navbar-title ng-bind="viewTitle"></super-navbar-title>
 </super-navbar>
+<div ng-hide="showRoulette">
+    <div class="row">
+        <div class="col">
+            <h3>Valitse aiheista mieluistaa tekemistä:</h3>
+        </div>
+    </div>
+    <div class="row responsive-sm" ng-repeat="mainCategories in splitMainCategories">
+        <div class="col" ng-repeat="mainCategory in mainCategories">
 
-<div class="row">
-    <div class="col">
-        <h3>Valitse aiheista mieluistaa tekemistä:</h3>
+            <super-navigate ng-if="!mainCategory.hasSubcategories" location="#/category/{{ mainCategory.id }}">
+                <button class="button button-stable button-block">{{ mainCategory.name }}</button>
+            </super-navigate>
+
+        </div>
+    </div>
+    <div clas="row responsive-sm">
+        <div class="col">
+            <button class="button button-positive button-block" ng-click="showRoulette=true">Elämysruletti</button>
+        </div>
     </div>
 </div>
-<div class="row responsive-sm" ng-repeat="mainCategories in splitMainCategories">
-    <div class="col" ng-repeat="mainCategory in mainCategories">
 
-        <super-navigate ng-if="!mainCategory.hasSubcategories" location="#/category/{{ mainCategory.id }}">
-            <button class="button button-stable button-block">{{ mainCategory.name }}</button>
-        </super-navigate>
-
-    </div>
-</div>
+<roulette ng-show="showRoulette" content="rouletteContent"></roulette>

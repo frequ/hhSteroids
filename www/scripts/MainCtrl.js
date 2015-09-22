@@ -2,8 +2,11 @@ angular.module('SteroidsApplication')
     .controller('MainCtrl', function ($scope, supersonic, $http, $rootScope) {
 
         $rootScope.viewTitle = "Hyvinvointiteekki";
+        $scope.showRoulette = false;
+        $scope.splitMainCategories = [];
+        $scope.rouletteContent = [];
 
-        $scope.init = function() {
+         $scope.initMain = function() {
             var promise = $scope.req = $http.get('assets/json/categories.json');
             promise
                 .success(function(data){
@@ -22,11 +25,24 @@ angular.module('SteroidsApplication')
 
                     });
                     $scope.splitMainCategories = [categories.slice(0,3),categories.slice(3,6),categories.slice(6,9)];
+                    $scope.loadRoulette();
                 })
                 .error(function(){
                     supersonic.logger.warn('error fetching static content from json');
                 });
         };
-        $scope.init();
+        $scope.initMain();
+
+        $scope.loadRoulette = function() {
+            var promise = $http.get('assets/json/roulette.json');
+            promise
+                .success(function(data) {
+                    $scope.rouletteContent = data;
+                })
+                .error(function() {
+                    supersonic.logger.warn('error fetching roulette content');
+                });
+
+        };
 
     });
