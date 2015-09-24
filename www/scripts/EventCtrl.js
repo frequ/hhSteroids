@@ -9,7 +9,13 @@ angular.module('SteroidsApplication')
             var promise = $http.get('assets/json/' + categoryId +'.json');
             promise
                 .success(function(data) {
-                    $scope.event = data.events[eventId];
+
+                    if (data.events) {
+                        $scope.event = data.events[eventId];
+                    }else{
+                        $scope.event = data[eventId];
+                    }
+
                     $rootScope.viewTitle = $scope.event.name;
 
                     if ($scope.event.content && typeof $scope.event.content === "string") {
