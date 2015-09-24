@@ -35,9 +35,10 @@
     border: 10px solid;
 	border-color: #777 #999 #666 #999;
 	border-radius: 3px;
-    height: 162px;
+    height: 163px;
     z-index: 999;
     overflow: hidden;
+    background-color: #d2ac2b;
 }
 .spinner .spinner-item-wrap{
     width: 95%;
@@ -80,7 +81,7 @@
 	background:        linear-gradient(to bottom, rgba(0, 0, 0, 1),  rgba(0, 0, 0, 0));
 }
 .spinner .shadow.bottom-shadow{
-    margin-top: 88px;
+    margin-top: 89px;
 
     background:-webkit-gradient(linear,left bottom,left top,from(rgba(0, 0, 0, 1)),to(rgba(0, 0, 0, 0)));
 	background:-webkit-linear-gradient(to top, rgba(0, 0, 0, 1),  rgba(0, 0, 0, 0));
