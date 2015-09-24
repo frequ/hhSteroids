@@ -50,12 +50,14 @@ angular.module('SteroidsApplication')
 
                         if (spinnerPos <= -289) {
 
+                            //reset spinner so it seems to be going around
                             spinnerPos = -1;
                             roundsDone++;
                             move(spinnerPos);
 
                         }else if (roundsDone >= totalRounds) {
 
+                            //slow down spinner
                             spinnerMoveInterval += 1;
 
                             if (spinnerMoveInterval >= 75) {
@@ -70,6 +72,7 @@ angular.module('SteroidsApplication')
                                     if (spinnerPos === stopPosition) {
                                         $interval.cancel(scope.finalInterval);
 
+                                        //show modal and wait for resetting so that user doesn't see it
                                         $timeout(function(){
                                             supersonic.ui.modal.show('#/category/roulette/' + winnerEvent.id);
                                         }, 500);
@@ -94,7 +97,6 @@ angular.module('SteroidsApplication')
                         }
 
                     }, spinnerMoveInterval);
-
                 }
                 timeout();
             }
@@ -131,14 +133,13 @@ angular.module('SteroidsApplication')
             }
 
             function reset() {
+                scope.running = false;
                 buildRoulette(scope, scope.content);
                 $timeout.cancel(scope.looper);
                 $interval.cancel(scope.finalInterval);
 
             }
-
-
-
+            
         }
     };
 });
