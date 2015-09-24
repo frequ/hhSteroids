@@ -1,5 +1,5 @@
 angular.module('SteroidsApplication')
-.directive('roulette', function() {
+.directive('roulette', function($interval, $timeout) {
     return {
         restrict: 'E',
         templateUrl: 'views/roulette.html',
@@ -13,24 +13,94 @@ angular.module('SteroidsApplication')
 
             scope.spin = function() {
                 scope.running = true;
-
+                mainLoop();
             };
 
             scope.back = function() {
                 scope.$parent.showRoulette = false;
-                //TODO call reset
+                reset();
             };
 
             scope.$watch('content', function(newVal, oldVal) {
                 if(newVal.length > 0) {
-                    supersonic.logger.log('building roulette');
                     scope.content = newVal;
                     buildRoulette(scope, scope.content);
                 }
             });
 
+            function move(marginTop) {
+                jQuery('.spinner-item-wrap').css('margin-top', marginTop + 'px');
+            }
+
+            function mainLoop() {
+
+                var spinnerPos = -1,
+                    roundsDone = 0,
+                    totalRounds = 4,
+                    spinnerMoveInterval = 25,
+                    stopRecursiveCalling = false,
+                    slotHeight = 49;
+
+                function timeout() {
+
+                    scope.looper = $timeout(function () {
+
+                        spinnerPos -= 4;
+                        move(spinnerPos);
+
+                        if (spinnerPos <= -289) {
+
+                            spinnerPos = -1;
+                            roundsDone++;
+                            move(spinnerPos);
+
+                        }else if (roundsDone >= totalRounds) {
+
+                            spinnerMoveInterval += 1;
+
+                            if (spinnerMoveInterval >= 75) {
+                                var stopPosition = (Math.round(spinnerPos / slotHeight) * slotHeight) + 3;
+                                var winnerEvent = scope.items[5];
+
+                                $timeout.cancel(scope.looper);
+                                stopRecursiveCalling = true;
+
+                                scope.finalInterval = $interval(function() {
+
+                                    if (spinnerPos === stopPosition) {
+                                        $interval.cancel(scope.finalInterval);
+
+                                        $timeout(function(){
+                                            supersonic.ui.modal.show('#/category/roulette/' + winnerEvent.id);
+                                        }, 500);
+                                        $timeout(function() {
+                                            reset();
+                                        }, 1500);
+
+                                    }else if (spinnerPos < stopPosition) {
+                                        spinnerPos++;
+                                    }else if (spinnerPos > stopPosition) {
+                                        spinnerPos--;
+                                    }
+                                    move(spinnerPos);
+
+                                }, spinnerMoveInterval);
+
+                            }
+                        }
+
+                        if (!stopRecursiveCalling) {
+                            timeout();
+                        }
+
+                    }, spinnerMoveInterval);
+
+                }
+                timeout();
+            }
+
             function shuffle(array) {
-                var currentIndex = array.length, temporaryValue, randomIndex ;
+                var currentIndex = array.length, temporaryValue, randomIndex;
 
                 // While there remain elements to shuffle...
                 while (0 !== currentIndex) {
@@ -51,26 +121,19 @@ angular.module('SteroidsApplication')
             function buildRoulette(scope, content) {
                 scope.items = [];
 
-                //create 6 random indexes and repeat 4 to end
+                //create 6 random indexes and repeat 3 to end
                 var items = shuffle(content);
-                var repeat = items.slice(0,4);
+                var repeat = items.slice(0,3);
                 items = items.slice(0,6);
                 scope.items = items.concat(repeat);
+                move(-1);
 
-                //supersonic.logger.log(scope.items);
-                var options = {
-                    target_borders: 2,
-                    target_margins: 2,
-                    target_height: 45,
-                    item_count: 10,
-                    start_spintime: 5000, //5sek
-                    start_offset: -(7*49) //items + outerborder 5px
-                };
+            }
 
-                var spinner = angular.element( document.querySelector('.spinner-item-wrap') );
-                spinner.css('top','-1px');
-
-
+            function reset() {
+                buildRoulette(scope, scope.content);
+                $timeout.cancel(scope.looper);
+                $interval.cancel(scope.finalInterval);
 
             }
 
