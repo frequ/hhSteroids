@@ -223,7 +223,7 @@
         "id": 31,
         "rouletteContent": true,
         "name": "Katso tarkasti!",
-        "content": "Tarkastele kuvia ja mieti, mitä ne voisivat sinulle kertoa: <div class=\"scroll-img\"><img src=\"images/fokus1.jpg\" /><img src=\"images/fokus2.jpg\" /></div>",
+        "content": "Tarkastele kuvia ja mieti, mitä ne voisivat sinulle kertoa: <div class=\"scroll-img\"><img src=\"assets/img/fokus1.jpg\" /><img src=\"assets/img/fokus2.jpg\" /></div>",
         "category": "Elämyksiä löytämään",
         "belongsTo": "Taide ja kulttuuri"
     },{
