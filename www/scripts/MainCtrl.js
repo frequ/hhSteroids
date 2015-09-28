@@ -45,4 +45,10 @@ angular.module('SteroidsApplication')
 
         };
 
+        $scope.enableRoulette = function() {
+            $scope.showRoulette = true;
+            supersonic.ui.animate('slideFromRight').perform();
+
+        };
+
     });

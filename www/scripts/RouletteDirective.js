@@ -18,6 +18,8 @@ angular.module('SteroidsApplication')
 
             scope.back = function() {
                 scope.$parent.showRoulette = false;
+                supersonic.ui.animate('slideFromLeft').perform();
+
                 reset();
             };
 
@@ -139,7 +141,7 @@ angular.module('SteroidsApplication')
                 $interval.cancel(scope.finalInterval);
 
             }
-            
+
         }
     };
 });
