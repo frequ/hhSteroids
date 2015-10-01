@@ -24,6 +24,7 @@ angular.module('SteroidsApplication')
                         counter++;
 
                     });
+                    
                     $scope.splitMainCategories = [categories.slice(0,3),categories.slice(3,6),categories.slice(6,9)];
                     $scope.loadRoulette();
                 })

@@ -18,10 +18,6 @@ angular.module('SteroidsApplication')
 
                     $rootScope.viewTitle = $scope.event.name;
 
-                    if ($scope.event.content && typeof $scope.event.content === "string") {
-                        $scope.event.content = $sce.trustAsHtml($scope.event.content);
-                    }
-
                     if ($scope.event.videoId) {
                         var protocol = location.protocol;
                         $scope.ytUrl = $sce.trustAsResourceUrl(protocol+"//www.youtube.com/embed/"+ $scope.event.videoId +"?rel=0");
@@ -33,5 +29,9 @@ angular.module('SteroidsApplication')
                 });
         };
         findEvent();
+
+        $scope.openUrl = function(url) {
+            supersonic.app.openURL(url);
+        };
 
     });

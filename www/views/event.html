@@ -2,7 +2,7 @@
     <super-navbar-title ng-bind="viewTitle"></super-navbar-title>
 </super-navbar>
 
-<p ng-bind-html="event.content"></p>
+<p compile="event.content" url="event.externalUrl"></p>
 
 <div ng-show="ytUrl" class="video-container">
     <iframe src="{{ytUrl}}" frameborder="0"></iframe></div>

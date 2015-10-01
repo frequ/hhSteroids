@@ -1,14 +1,10 @@
 angular.module('SteroidsApplication')
-.controller('SubcategoryCtrl', function ($scope, supersonic, $http, $routeParams, $rootScope, $sce) {
+.controller('SubcategoryCtrl', function ($scope, supersonic, $http, $routeParams, $rootScope, $sce, helpers) {
 
     $scope.categoryId = $routeParams.categoryId;
     $scope.subcategoryId = $routeParams.subcategoryId;
     $scope.events = [];
     $scope.eventsLead = undefined;
-
-    $scope.makeComparable = function(str) {
-        return str.replace(/ä/g, "a").replace(/ö/g, "o").split(' ').join('-').toLowerCase();
-    };
 
     var getSubcategoryContent = function() {
         var promise = $http.get('assets/json/' + $scope.categoryId + '.json');
@@ -18,7 +14,7 @@ angular.module('SteroidsApplication')
                 //get lead text
                 if ( data && data.subcategories ) {
                     data.subcategories.forEach(function(subcategory) {
-                        var nameCom = $scope.makeComparable(subcategory.name);
+                        var nameCom = helpers.makeComparable(subcategory.name);
                         if (!$scope.eventsLead && nameCom === $scope.subcategoryId) {
                             $scope.eventsLead = $sce.trustAsHtml(subcategory.lead);
                             $rootScope.viewTitle = subcategory.name;
@@ -30,13 +26,13 @@ angular.module('SteroidsApplication')
                 if (data && data.events) {
                     var events = [];
                     data.events.forEach(function(item) {
-                        var com = $scope.makeComparable(item.belongsTo);
+                        var com = helpers.makeComparable(item.belongsTo);
                         if (com === $scope.subcategoryId) {
                             events.push(item);
                         }
                     });
 
-                    $scope.events = events;
+                    $scope.splitEvents = helpers.constructSplitting(events, 3);
 
                 }
             })

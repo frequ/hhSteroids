@@ -1,5 +1,5 @@
 angular.module('SteroidsApplication')
-.controller('CategoryCtrl', function ($scope, supersonic, $http, $routeParams, $sce, $rootScope, $window) {
+.controller('CategoryCtrl', function ($scope, supersonic, $http, $routeParams, $sce, $rootScope, $window, helpers) {
 
     $scope.events = [];
     $scope.eventsName = "";
@@ -27,12 +27,12 @@ angular.module('SteroidsApplication')
                     subcats.push(obj);
                 });
 
-                $scope.subcategories = subcats;
+                $scope.splitSubcats = helpers.constructSplitting(subcats, 3);
             }
 
             $scope.eventsName = data.name;
             $rootScope.viewTitle = data.name;
-            $scope.events = data.events;
+            $scope.splitEvents = helpers.constructSplitting(data.events, 3);
             $scope.eventsLead = $sce.trustAsHtml(data.lead);
 
         })
