@@ -28,7 +28,7 @@
     },{
         "id": 2,
         "name": "Naiskauneutta (vuosien takaa)",
-        "content": "Armi -Muhokselta Maailman kauneimmaksi 1953: <a target=\"_blank\" href=\"http://yle.fi/aihe/artikkeli/2006/09/08/muhokselta-manilaan\"><button class=\"btn btn-lg btn-primary btn-block\" >Katso YLE-areenasta</button></a>",
+        "content": "Armi -Muhokselta Maailman kauneimmaksi 1953: <super-navigate location=\"http://yle.fi/aihe/artikkeli/2006/09/08/muhokselta-manilaan\"><button class=\"button button-stable button-block\">Katso YLE-areenasta</button></super-navigate>",
         "category": "Elämyksiä löytämään",
         "belongsTo": "Perinteet ja historian havinaa"
     },{
@@ -83,31 +83,31 @@
     },{
         "id": 10,
         "name": "Kalastus 50-luvulla",
-        "content": "Lohenkalastusta Suomenlahdella ammattikalastajien matkassa 1957: <a target=\"_blank\" href=\"http://yle.fi/aihe/artikkeli/2009/11/18/lohi-kay-pyydykseen\"><button class=\"btn btn-lg btn-primary btn-block\">Katso YLE-areenasta</button></a>",
+        "content": "Lohenkalastusta Suomenlahdella ammattikalastajien matkassa 1957: <super-navigate location=\"http://yle.fi/aihe/artikkeli/2009/11/18/lohi-kay-pyydykseen\"><button class=\"button button-stable button-block\">Katso YLE-areenasta</button></super-navigate>",
         "category": "Elämyksiä löytämään",
         "belongsTo": "Luonnonantimet"
     },{
         "id": 11,
         "name": "Rysäkalastus",
-        "content": "Vaari vie pojanpoikansa tutustumaan rysäkalastukseen Kuhmalahdella 1986: <a target=\"_blank\" href=\"http://yle.fi/aihe/artikkeli/2010/05/26/rysalla-lahnaa-ja-saalis-savustumaan\"><button class=\"btn btn-lg btn-primary btn-block\">Katso YLE-areenasta</button></a>",
+        "content": "Vaari vie pojanpoikansa tutustumaan rysäkalastukseen Kuhmalahdella 1986: <super-navigate location=\"http://yle.fi/aihe/artikkeli/2010/05/26/rysalla-lahnaa-ja-saalis-savustumaan\"><button class=\"button button-stable button-block\">Katso YLE-areenasta</button></super-navigate>",
         "category": "Elämyksiä löytämään",
         "belongsTo": "Luonnonantimet"
     },{
         "id": 12,
         "name": "Hirvenmetsästys",
-        "content": "Hirvenmetsästystä Utsjoella 2010: <a target=\"_blank\" href=\"http://yle.fi/aihe/artikkeli/2012/09/27/hirvimetsalla-utsjoen-eramaassa-ja-helvetin-aarella\"><button class=\"btn btn-lg btn-primary btn-block\">Katso YLE-areenasta</button></a>",
+        "content": "Hirvenmetsästystä Utsjoella 2010: <super-navigate location=\"http://yle.fi/aihe/artikkeli/2012/09/27/hirvimetsalla-utsjoen-eramaassa-ja-helvetin-aarella\"><button class=\"button button-stable button-block\">Katso YLE-areenasta</button></super-navigate>",
         "category": "Elämyksiä löytämään",
         "belongsTo": "Luonnonantimet"
     },{
         "id": 13,
         "name": "Karhunkaataja muistelee.",
-        "content": "Vanha karhunkaataja muistelee. Savukoskelainen Alpi Ikäheimo oli yksi niistä viimeisistä eränkävijöistä, jotka saivat metsästyksestä elannon perheelleen. 1977: <a target=\"_blank\" href=\"http://yle.fi/aihe/artikkeli/2010/04/21/vanha-karhunkaataja-muistelee\"><button class=\"btn btn-lg btn-primary btn-block\">Katso YLE-areenasta</button></a>",
+        "content": "Vanha karhunkaataja muistelee. Savukoskelainen Alpi Ikäheimo oli yksi niistä viimeisistä eränkävijöistä, jotka saivat metsästyksestä elannon perheelleen. 1977: <super-navigate location=\"http://yle.fi/aihe/artikkeli/2010/04/21/vanha-karhunkaataja-muistelee\"><button class=\"button button-stable button-block\">Katso YLE-areenasta</button></super-navigate>",
         "category": "Elämyksiä löytämään",
         "belongsTo": "Luonnonantimet"
     },{
         "id": 14,
         "name": "Muikku 60-luvulla",
-        "content": "Puruvedestä nousee muikkua talvella 1964: <a target=\"_blank\" href=\"http://yle.fi/aihe/artikkeli/2009/06/04/puruvedesta-nousee-muikkua-talvella-1964\"><button class=\"btn btn-lg btn-primary btn-block\" >Katso YLE-areenasta</button></a>",
+        "content": "Puruvedestä nousee muikkua talvella 1964: <super-navigate location=\"http://yle.fi/aihe/artikkeli/2009/06/04/puruvedesta-nousee-muikkua-talvella-1964\"><button class=\"button button-stable button-block\">Katso YLE-areenasta</button></super-navigate>",
         "category": "Elämyksiä löytämään",
         "belongsTo": "Luonnonantimet"
     },{
@@ -216,7 +216,7 @@
         "id": 30,
         "rouletteContent": true,
         "name": "Taidenäyttely kotisohvalta",
-        "content": "Valitse suosikkitaulusi Ateneumin taidemuseon kokoelmista ja kuuntele teosesittely. Voit nähdä tutussakin taulussa jotakin aivan uutta.<br/><br/><a target=\"_blank\" href=\"http://www.ateneum.fi/fi/%C3%A4%C3%A4niopas-ateneumin-kokoelmiin\" target=\"_blank\"><button class=\"btn btn-lg btn-primary\")>Tästä Ateneumiin</button></a>",
+        "content": "Valitse suosikkitaulusi Ateneumin taidemuseon kokoelmista ja kuuntele teosesittely. Voit nähdä tutussakin taulussa jotakin aivan uutta.<br/><br/><super-navigate location=\"http://www.ateneum.fi/fi/%C3%A4%C3%A4niopas-ateneumin-kokoelmiin\"><button class=\"button button-stable button-block\")>Tästä Ateneumiin</button></super-navigate>",
         "category": "Elämyksiä löytämään",
         "belongsTo": "Taide ja kulttuuri"
     },{

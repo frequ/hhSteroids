@@ -30,8 +30,9 @@
         },{
             "id": 4,
             "name": "Musiikilliset harjoitukset",
-            "content": "Musiikillisissa harjoituksissa kuulet laulua. Kun laulu pysähtyy, valitse vaihtoehdoista sanat, joilla laulu jatkuu. Onnea matkaan! <a href=\"http://www.miinasillanpaa.fi/yhteinen-savel/#/games\" target=\"_blank\"><button class=\"btn btn-primary btn-lg btn-block\">Siirry harjoitteisiin</button>",
-            "category": "Ilmaise itseäsi"
+            "content": "Musiikillisissa harjoituksissa kuulet laulua. Kun laulu pysähtyy, valitse vaihtoehdoista sanat, joilla laulu jatkuu. Onnea matkaan! <button class=\"button button-stable button-block\">Siirry harjoitteisiin</button>",
+            "category": "Ilmaise itseäsi",
+            "externalUrl": "http://www.miinasillanpaa.fi/yhteinen-savel/#/games"
         },{
             "id": 5,
             "name": "Kauneimmat sävelet soitetaan vanhalla viululla",

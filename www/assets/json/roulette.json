@@ -120,42 +120,42 @@
     "id": 17,
     "rouletteContent": true,
     "name": "Musiikin tahtiin!",
-    "content": "Antaudu musiikin vietäväksi! Laita tanssittavaa mielimusiikkiasi soimaan ja irrottele oikein kunnolla yhden kappaleen ajan. Twistausta, sheikkausta, heilutusta, keinutusta, tuolitanssia tai humppaa… anna mennä!<img src=\"images/tanssikuva.jpg\" \/>"
+    "content": "Antaudu musiikin vietäväksi! Laita tanssittavaa mielimusiikkiasi soimaan ja irrottele oikein kunnolla yhden kappaleen ajan. Twistausta, sheikkausta, heilutusta, keinutusta, tuolitanssia tai humppaa… anna mennä!<img src=\"assets/img/tanssikuva.jpg\" \/>"
 },{
     "id": 18,
     "rouletteContent": true,
     "name": "Tee rentoutushengitysharjoitus",
-    "content": "Harjoitus auttaa sinua rentoutumaan, kun tunnet stressiä, ahdistusta tai ärtymystä.<a href=\"http://oivamieli.fi/rentoutushengitys.php\" target=\"_blank\"><button class=\"btn btn-primary btn-block btn-lg\">Tee harjoitus tästä<\/button></a>"
+    "content": "Harjoitus auttaa sinua rentoutumaan, kun tunnet stressiä, ahdistusta tai ärtymystä. <super-navigate location=\"http://oivamieli.fi/rentoutushengitys.php\"><button class=\"button button-stable button-block\">Tee harjoitus tästä</button></super-navigate>"
 },{
     "id": 19,
     "rouletteContent": true,
     "name": "Tee Vuori-harjoitus",
-    "content": "Harjoitus on hyvä, kun tunnet olosi hajanaiseksi ja rauhattomaksi.<a href=\"http://oivamieli.fi/vuori.php\" target=\"_blank\"<button class=\"btn btn-primary btn-block btn-lg\">Tee harjoitus tästä<\/button></a>"
+    "content": "Harjoitus on hyvä, kun tunnet olosi hajanaiseksi ja rauhattomaksi. <super-navigate location=\"http://oivamieli.fi/vuori.php\"><button class=\"button button-stable button-block\">Tee harjoitus tästä</button></super-navigate>"
 },{
     "id": 20,
     "rouletteContent": true,
     "name": "Ole läsnä",
-    "content": "Elä tässä hetkessä. Katso ja kuuntele johdanto tietoiseen läsnäoloon<a href=\"http://oivamieli.fi/tietoinen_mieli_intro.php\" target=\"_blank\"><button class=\"btn btn-primary btn-block btn-lg\">Aloita tästä<\/button></a>"
+    "content": "Elä tässä hetkessä. Katso ja kuuntele johdanto tietoiseen läsnäoloon: <super-navigate location=\"http://oivamieli.fi/tietoinen_mieli_intro.php\"><button class=\"button button-stable button-block\">Aloita tästä</button></super-navigate>"
 },{
     "id": 21,
     "rouletteContent": true,
     "name": "Hyväksyvä mieli -harjoitus",
-    "content": "Hyväksy ajatuksesi ja tunteesi - se, mitä et voi muuttaa. Tee harjoitus<a href=\"http://oivamieli.fi/hyvaksyva_mieli_intro.php\" target=\"_blank\"><button class=\"btn btn-primary btn-block btn-lg\">Aloita harjoitus tästä<\/button></a>"
+    "content": "Hyväksy ajatuksesi ja tunteesi - se, mitä et voi muuttaa. Tee harjoitus: <super-navigate location=\"http://oivamieli.fi/hyvaksyva_mieli_intro.php\"><button class=\"button button-stable button-block\">Aloita harjoitus tästä</button></super-navigate>"
 },{
     "id": 22,
     "rouletteContent": true,
     "name": "Tee Lehdet virrassa -harjoitus",
-    "content": "Huomaa, kuinka ajatuksesi tulevat ja menevät.<a href=\"http://oivamieli.fi/lehdet_virrassa.php\" target=\"_blank\"><button class=\"btn btn-primary btn-block btn-lg\">Aloita tästä<\/button></a>"
+    "content": "Huomaa, kuinka ajatuksesi tulevat ja menevät. <super-navigate location=\"http://oivamieli.fi/lehdet_virrassa.php\"><button class=\"button button-stable button-block\">Aloita tästä</button></super-navigate>"
 },{
     "id": 23,
     "rouletteContent": true,
     "name": "Rikkinäinen automaatti -harjoitus",
-    "content": "Harjoittele hyväksyvää asennetta itseäsi ja tilannettasi kohtaan.<a href=\"http://oivamieli.fi/rikkinainen_automaatti.php\" target=\"_blank\"><button class=\"btn btn-primary btn-block btn-lg\">Tee Rikkinäinen automaatti -harjoitus tästä<\/button></a>"
+    "content": "Harjoittele hyväksyvää asennetta itseäsi ja tilannettasi kohtaan.<super-navigate location=\"http://oivamieli.fi/rikkinainen_automaatti.php\"><button class=\"button button-stable button-block\">Tee Rikkinäinen automaatti -harjoitus tästä</button></super-navigate>"
 },{
     "id": 24,
     "rouletteContent": true,
     "name": "Matkustajat bussissa -harjoitus",
-    "content": "Huomaa ajatuksia, jotka estävät sinua toimimasta arvojesi mukaisesti. Matkustajat bussissa -harjoituksen avulla opit vapautumista ajatusten ylivallasta.<a href=\"http:\/\/oivamieli.fi\/matkustajat_bussissa.php\" target=\"_blank\"><button class=\"btn btn-primary btn-block btn-lg\">Tee Matkustajat bussissa -harjoitus tästä<\/button></a>"
+    "content": "Huomaa ajatuksia, jotka estävät sinua toimimasta arvojesi mukaisesti. Matkustajat bussissa -harjoituksen avulla opit vapautumista ajatusten ylivallasta. <super-navigate location=\"http:\/\/oivamieli.fi\/matkustajat_bussissa.php\"><button class=\"button button-stable button-block\">Tee Matkustajat bussissa -harjoitus tästä</button></super-navigate>"
 },{
     "id": 25,
     "rouletteContent": true,
@@ -184,19 +184,19 @@
     "id": 29,
     "rouletteContent": true,
     "name": "Taidenäyttely kotisohvalta",
-    "content": "Valitse suosikkitaulusi Ateneumin taidemuseon kokoelmista ja kuuntele teosesittely. Voit nähdä tutussakin taulussa jotakin aivan uutta<a href=\"http://www.ateneum.fi/fi/%C3%A4%C3%A4niopas-ateneumin-kokoelmiin\" target=\"_blank\"><button class=\"btn btn-primary btn-block btn-lg\")>Tästä Ateneumiin<\/button></a>",
+    "content": "Valitse suosikkitaulusi Ateneumin taidemuseon kokoelmista ja kuuntele teosesittely. Voit nähdä tutussakin taulussa jotakin aivan uutta <super-navigate location=\"http://www.ateneum.fi/fi/%C3%A4%C3%A4niopas-ateneumin-kokoelmiin\"><button class=\"button button-stable button-block\")>Tästä Ateneumiin</button></super-navigate>",
     "category": "Elämyksiä taiteesta ja kulttuurista"
 },{
     "id": 30,
     "rouletteContent": true,
     "name": "Katso tarkasti!",
-    "content": "Tarkastele kuvia ja mieti, mitä ne voisivat sinulle kertoa:<div class=\"scroll-img\"><img src=\"images/fokus1.jpg\" \/><img src=\"images/fokus2.jpg\" \/><\/div>",
+    "content": "Tarkastele kuvia ja mieti, mitä ne voisivat sinulle kertoa:<div class=\"scroll-img\"><img src=\"assets/img/fokus1.jpg\" \/><img src=\"assets/img/fokus2.jpg\" \/><\/div>",
     "category": "Elämyksiä taiteesta ja kulttuurista"
 },{
     "id": 31,
     "rouletteContent": true,
     "name": "Lähetä kortti",
-    "content": "Lähetä kortti jollekin ystävällesi, sukulaiselle, vanhalle tutulle tai henkilölle, joka ensimmäisenä tulee mieleesi. Kortin sähköpostiosoitteeseen voit maksutta lähettää myös näiden linkkien kautta:<a href=\"http://www.eloisaika.fi/eloisa-ika/eloisat-hahmot/laheta-e-kortti/\" target=\"_blank\"><button class=\"btn btn-primary\")>Tästä<\/button></a> Tai <a href=\"http://papunet.net/_pelit/postikortti/\" target=\"_blank\"><button class=\"btn btn-primary\">Täältä<\/button></a>"
+    "content": "Lähetä kortti jollekin ystävällesi, sukulaiselle, vanhalle tutulle tai henkilölle, joka ensimmäisenä tulee mieleesi. Kortin sähköpostiosoitteeseen voit maksutta lähettää myös näiden linkkien kautta: <super-navigate location=\"http://www.eloisaika.fi/eloisa-ika/eloisat-hahmot/laheta-e-kortti/\"><button class=\"button button-stable button-block\")>Tästä</button></super-navigate><super-navigate location=\"http://papunet.net/_pelit/postikortti/\"><button class=\"button button-stable button-block\">Tai täältä</button></super-navigate>"
 },{
     "id": 32,
     "rouletteContent": true,
