@@ -5,7 +5,7 @@ angular.module('SteroidsApplication')
         var categoryId = $routeParams.categoryId;
         $scope.event = {};
 
-        var findEvent = function(){
+        var findEvent = function() {
             var promise = $http.get('assets/json/' + categoryId +'.json');
             promise
                 .success(function(data) {

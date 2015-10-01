@@ -4,7 +4,6 @@ angular.module('SteroidsApplication')
     $scope.events = [];
     $scope.eventsName = "";
     $scope.hasSubcategories = false;
-    $scope.inSubcategoryListing = false;
 
     $scope.categoryId = $routeParams.categoryId;
 

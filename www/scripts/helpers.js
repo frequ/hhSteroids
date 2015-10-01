@@ -11,14 +11,12 @@ angular.module('SteroidsApplication')
                 var start = 0;
                 var end = divisible;
 
-                for(var i = 0; i < Math.ceil(splittable.length/divisible); i++) {
-
+                for (var i = 0; i < Math.ceil(splittable.length/divisible); i++) {
                     returnArr.push(splittable.slice(start, end));
-
                     start += divisible;
                     end += divisible;
-
                 }
+
                 return returnArr;
             }
 

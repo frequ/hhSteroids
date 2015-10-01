@@ -4,7 +4,7 @@ angular.module('SteroidsApplication')
         return {
             restrict: 'A',
             replace: true,
-            link: function(scope, element, attrs)  {
+            link: function(scope, element, attrs) {
 
                 scope.$watch(attrs.compile, function(html) {
 

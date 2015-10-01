@@ -19,7 +19,6 @@ angular.module('SteroidsApplication')
             scope.back = function() {
                 scope.$parent.showRoulette = false;
                 supersonic.ui.animate('slideFromLeft').perform();
-
                 reset();
             };
 
@@ -75,7 +74,7 @@ angular.module('SteroidsApplication')
                                         $interval.cancel(scope.finalInterval);
 
                                         //show modal and wait for resetting so that user doesn't see it
-                                        $timeout(function(){
+                                        $timeout(function() {
                                             supersonic.ui.modal.show('#/category/roulette/' + winnerEvent.id);
                                         }, 500);
                                         $timeout(function() {
@@ -131,7 +130,6 @@ angular.module('SteroidsApplication')
                 items = items.slice(0,6);
                 scope.items = items.concat(repeat);
                 move(-1);
-
             }
 
             function reset() {
@@ -139,7 +137,6 @@ angular.module('SteroidsApplication')
                 buildRoulette(scope, scope.content);
                 $timeout.cancel(scope.looper);
                 $interval.cancel(scope.finalInterval);
-
             }
 
         }
