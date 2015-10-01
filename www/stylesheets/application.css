@@ -104,3 +104,32 @@
 img{
     width: 100%;
 }
+
+/* iPad in portrait and up */
+@media only screen and (min-device-width: 768px) {
+
+    .responsive-sm .col{
+        position: relative;
+        height: 200px;
+        margin-bottom: 15px;
+    }
+
+    .responsive-sm .col .category-btn{
+        position: absolute;
+        height: 100%;
+        font-size: 150%;
+        width: 96%;
+        margin: 0 2%;
+
+    }
+
+    .responsive-sm .col .roulette-btn{
+        position: absolute;
+        height: 100%;
+        width: 98%;
+        margin: 0 1%;
+        font-size: 150%;
+    }
+
+
+}
