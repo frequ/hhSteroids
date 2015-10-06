@@ -6,9 +6,9 @@
     <div class="item item-text-wrap" ng-bind-html="eventsLead"></div>
 </div>
 
-<div class="row">
+<div class="row" ng-show="selectedSubCategory">
     <div class="col">
-        <h4 ng-show="selectedSubCategory">{{ selectedSubCategory.name }}</h4>
+        <h4>{{ selectedSubCategory.name }}</h4>
     </div>
 </div>
 
