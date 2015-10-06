@@ -1,10 +1,34 @@
 /* iPad in portrait and up */
 @media only screen and (min-device-width: 768px) {
 
+    body,html{
+        height: 100%;
+        width: 100%;
+    }
+
+    .main-content, .padding{
+        height: 100%;
+    }
+
+    .row{
+        height: 20%;
+        margin-bottom: 10px;
+
+        &:first-child{
+                height: 50px;
+        }
+    }
+
     .responsive-sm .col{
         position: relative;
-        height: 200px;
+        height: 100%;
         margin-bottom: 15px;
+
+        super-navigate{
+            height: inherit;
+        }
+
+
 
         .category-btn{
             position: absolute;
