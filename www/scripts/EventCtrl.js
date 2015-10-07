@@ -30,8 +30,4 @@ angular.module('SteroidsApplication')
         };
         findEvent();
 
-        $scope.openUrl = function(url) {
-            supersonic.app.openURL(url);
-        };
-
     });

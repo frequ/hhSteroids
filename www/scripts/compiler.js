@@ -1,18 +1,24 @@
 angular.module('SteroidsApplication')
-    .directive('compile', function($compile) {
+    .directive('compile', function($compile, supersonic) {
 
         return {
             restrict: 'A',
             replace: true,
             link: function(scope, element, attrs) {
 
-                scope.$watch(attrs.compile, function(html) {
+                scope.url = undefined;
 
-                    //fugly hack but does the trick
-                    //if there is no externalUrl in event obj, then it seems to come here as a string
-                    if (attrs.url && attrs.url !== "event.externalUrl") {
-                        var index = html.indexOf('<button') +7;
-                        html = html.slice(0,index) + " ng-click=\"openUrl("+attrs.url+")\" " + html.slice(index);
+                scope.openUrl = function() {
+                    supersonic.logger.log('in openurl ' + scope.url);
+                    supersonic.app.openURL(scope.url);
+                };
+
+                scope.$watch(attrs.compile, function(html) {
+                    //fugly hack but does the trick - url as a function parameter doesn't seem to work
+                    if (attrs.url) {
+                        scope.url = attrs.url;
+                        var index = html.indexOf('<button') + 7;
+                        html = html.slice(0,index) + " ng-click=\"openUrl()\" " + html.slice(index);
                     }
 
                     element.html(html);
